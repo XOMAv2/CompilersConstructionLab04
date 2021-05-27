@@ -1,0 +1,27 @@
+{:prods {"vyrajenie" #{["prostoe-vyrajenie"]
+                       ["prostoe-vyrajenie" "=" "prostoe-vyrajenie"]
+                       ["prostoe-vyrajenie" "<>" "prostoe-vyrajenie"]
+                       ["prostoe-vyrajenie" "<" "prostoe-vyrajenie"]
+                       ["prostoe-vyrajenie" "<=" "prostoe-vyrajenie"]
+                       ["prostoe-vyrajenie" ">" "prostoe-vyrajenie"]
+                       ["prostoe-vyrajenie" ">=" "prostoe-vyrajenie"]}
+         "prostoe-vyrajenie" #{["ttterm"]
+                               ["+" "ttterm"]
+                               ["-" "ttterm"]
+                               ["prostoe-vyrajenie" "+" "ttterm"]
+                               ["prostoe-vyrajenie" "-" "ttterm"]
+                               ["prostoe-vyrajenie" "or" "ttterm"]}
+         "ttterm" #{["faktor"]
+                    ["ttterm" "*" "faktor"]
+                    ["ttterm" "/" "faktor"]
+                    ["ttterm" "div" "faktor"]
+                    ["ttterm" "mod" "faktor"]
+                    ["ttterm" "and" "faktor"]}
+         "faktor" #{["идент"]
+                    ["конст"]
+                    ["(" "prostoe-vyrajenie" ")"]
+                    ["not" "faktor"]}}
+ :terms #{"=" "<>" "<" "<=" ">" ">=" "+" "-" "or" "*" "/"
+          "div" "mod" "and" "идент" "конст" "(" ")" "not"}
+ :nonterms #{"vyrajenie" "prostoe-vyrajenie" "ttterm" "faktor"}
+ :start-symbol "vyrajenie"}
