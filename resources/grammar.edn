@@ -1,5 +1,5 @@
 {:prods {"vyrajenie" #{["prostoe-vyrajenie"]
-                       ["prostoe-vyrajenie" "=" "prostoe-vyrajenie"]
+                       ["prostoe-vyrajenie" "==" "prostoe-vyrajenie"]
                        ["prostoe-vyrajenie" "<>" "prostoe-vyrajenie"]
                        ["prostoe-vyrajenie" "<" "prostoe-vyrajenie"]
                        ["prostoe-vyrajenie" "<=" "prostoe-vyrajenie"]
@@ -21,7 +21,7 @@
                     ["конст"]
                     ["(" "prostoe-vyrajenie" ")"]
                     ["not" "faktor"]}}
- :terms #{"=" "<>" "<" "<=" ">" ">=" "+" "-" "or" "*" "/"
+ :terms #{"==" "<>" "<" "<=" ">" ">=" "+" "-" "or" "*" "/"
           "div" "mod" "and" "идент" "конст" "(" ")" "not"}
  :nonterms #{"vyrajenie" "prostoe-vyrajenie" "ttterm" "faktor"}
  :start-symbol "vyrajenie"}
