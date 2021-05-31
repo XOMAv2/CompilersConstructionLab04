@@ -24,6 +24,26 @@
  :terms #{"==" "<>" "<" "<=" ">" ">=" "+" "-" "or" "*" "/" "div" "mod" "and" "идент" "конст" "(" ")" "not"}
  :nonterms #{"vyrajenie" "prostoe-vyrajenie" "ttterm" "faktor"}
  :start-symbol "vyrajenie"
+ :subroutines {["prostoe-vyrajenie" "==" "prostoe-vyrajenie"] (print "[==] ")
+               ["prostoe-vyrajenie" "<>" "prostoe-vyrajenie"] (print "[<>] ")
+               ["prostoe-vyrajenie" "<" "prostoe-vyrajenie"] (print "[<] ")
+               ["prostoe-vyrajenie" "<=" "prostoe-vyrajenie"] (print "[<=] ")
+               ["prostoe-vyrajenie" ">" "prostoe-vyrajenie"] (print "[>] ")
+               ["prostoe-vyrajenie" ">=" "prostoe-vyrajenie"] (print "[>=] ")
+               ["+" "ttterm"] (print "[+] ")
+               ["-" "ttterm"] (print "[-] ")
+               ["prostoe-vyrajenie" "+" "ttterm"] (print "[+] ")
+               ["prostoe-vyrajenie" "-" "ttterm"] (print "[-] ")
+               ["prostoe-vyrajenie" "or" "ttterm"] (print "[or] ")
+               ["ttterm" "*" "faktor"] (print "[*] ")
+               ["ttterm" "/" "faktor"] (print "[/] ")
+               ["ttterm" "div" "faktor"] (print "[div] ")
+               ["ttterm" "mod" "faktor"] (print "[mod] ")
+               ["ttterm" "and" "faktor"] (print "[and] ")
+               ["идент"] (print "[идент] ")
+               ["конст"] (print "[конст] ")
+               ["not" "faktor"] (print "[not] ")
+               ["(" "prostoe-vyrajenie" ")"] (print "[()] ")}
  :border-marker "$"
  :precedence-table
  {"=="    {"==" nil "<>" nil "<" nil "<=" nil ">" nil ">=" nil   "+" "<" "-" "<" "or" "<"   "*" "<" "/" "<" "div" "<" "mod" "<" "and" "<"   "идент" "<" "конст" "<" "(" "<" ")" nil "not" "<"   "$" ">"}
