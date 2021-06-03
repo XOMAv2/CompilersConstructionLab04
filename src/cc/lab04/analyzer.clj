@@ -44,7 +44,7 @@
            rhs (-> prod vals first)]
        (eval (get subroutines rhs))
        (do (when debug? (println :5))
-           (recur (pop stack) []))))))
+           (pop stack))))))
 
 (defn syntax-analyzer
   [tokens {:keys [precedence-table nonterms border-marker] :as grammar} & {:keys [debug?]}]

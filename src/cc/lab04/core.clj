@@ -18,3 +18,7 @@
 
 #_(-main "resources/grammar.edn"
        "идент * идент")
+
+#_(-main "resources/grammar.edn"
+       "идент or идент * идент"
+       :debug? false)
