@@ -13,7 +13,7 @@
     (syntax-analyzer tokens grammar :debug? debug?)))
 
 (-main "resources/grammar.edn"
-       "( not идент ) + ( - конст ) >= ( идент *       ( идент - конст ) mod конст  )   "
+       "not идент + ( - конст ) >= идент *       ( идент - конст ) mod конст    "
        :debug? false)
 
 #_(-main "resources/grammar.edn"
